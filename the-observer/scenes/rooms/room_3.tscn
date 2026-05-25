@@ -10,3 +10,10 @@ script = ExtResource("1_josgj")
 position = Vector2(532, 312)
 
 [node name="Doors" type="Node" parent="." unique_id=406132807]
+
+[node name="temp_room_shower" type="TextEdit" parent="." unique_id=1354921738]
+offset_left = 182.0
+offset_top = 218.0
+offset_right = 213.0
+offset_bottom = 269.0
+text = "3"

@@ -17,3 +17,10 @@ position = Vector2(0, 297)
 rotation = -1.5799239
 room_tag = "room_1"
 position_tag = "e"
+
+[node name="temp_room_shower" type="TextEdit" parent="." unique_id=1656208477]
+offset_left = 182.0
+offset_top = 218.0
+offset_right = 213.0
+offset_bottom = 269.0
+text = "2"
