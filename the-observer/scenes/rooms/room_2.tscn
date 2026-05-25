@@ -1,8 +1,19 @@
 [gd_scene format=3 uid="uid://v16qrgs6uved"]
 
+[ext_resource type="Script" uid="uid://b3guynd2wrsl4" path="res://scripts/level.gd" id="1_3e1ps"]
 [ext_resource type="PackedScene" uid="uid://dqkqblw0t81lj" path="res://scenes/player.tscn" id="1_6a8el"]
+[ext_resource type="PackedScene" uid="uid://bhixvpk506kjs" path="res://scenes/door.tscn" id="3_ar6ir"]
 
 [node name="room_2" type="Node2D" unique_id=1176185118]
+script = ExtResource("1_3e1ps")
 
 [node name="Player" parent="." unique_id=1556698523 instance=ExtResource("1_6a8el")]
 position = Vector2(528, 309)
+
+[node name="Doors" type="Node" parent="." unique_id=565426478]
+
+[node name="Door_w" parent="Doors" unique_id=620864986 instance=ExtResource("3_ar6ir")]
+position = Vector2(0, 297)
+rotation = -1.5799239
+room_tag = "room_1"
+position_tag = "e"

@@ -10,3 +10,10 @@ func get_input():
 func _physics_process(_delta: float) -> void:
 	get_input()
 	move_and_slide()
+
+func _ready():
+	Globals.on_trigger_player_spawn.connect(_on_spawn)
+	
+func _on_spawn(position: Vector2, direction: String):
+	global_position = position
+	

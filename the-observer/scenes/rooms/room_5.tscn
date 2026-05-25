@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://carlixjbti1i3"]
 
+[ext_resource type="Script" uid="uid://b3guynd2wrsl4" path="res://scripts/level.gd" id="1_585it"]
 [ext_resource type="PackedScene" uid="uid://dqkqblw0t81lj" path="res://scenes/player.tscn" id="1_wq1n7"]
 
 [node name="room_5" type="Node2D" unique_id=1338870574]
+script = ExtResource("1_585it")
 
 [node name="Player" parent="." unique_id=1556698523 instance=ExtResource("1_wq1n7")]
 position = Vector2(528, 213)
+
+[node name="Doors" type="Node" parent="." unique_id=814824274]
