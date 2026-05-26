@@ -17,7 +17,19 @@ position = Vector2(552, 0)
 room_tag = "room_1"
 position_tag = "s"
 
-[node name="temp_room_shower" type="TextEdit" parent="." unique_id=782817517]
+[node name="Door_e" parent="Doors" unique_id=1544276488 instance=ExtResource("3_8h73v")]
+position = Vector2(1155, 320.00003)
+rotation = 1.5712559
+room_tag = "room_5"
+position_tag = "w"
+
+[node name="Door_s" parent="Doors" unique_id=1357977912 instance=ExtResource("3_8h73v")]
+position = Vector2(552, 649)
+rotation = -3.1342828
+room_tag = "room_7"
+position_tag = "n"
+
+[node name="temp_room_label" type="TextEdit" parent="." unique_id=782817517]
 offset_left = 182.0
 offset_top = 218.0
 offset_right = 213.0

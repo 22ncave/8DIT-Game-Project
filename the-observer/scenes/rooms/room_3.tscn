@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dqkqblw0t81lj" path="res://scenes/player.tscn" id="1_etvqs"]
 [ext_resource type="Script" uid="uid://b3guynd2wrsl4" path="res://scripts/level.gd" id="1_josgj"]
+[ext_resource type="PackedScene" uid="uid://bhixvpk506kjs" path="res://scenes/door.tscn" id="3_g5ssp"]
 
 [node name="room_3" type="Node2D" unique_id=403007972]
 script = ExtResource("1_josgj")
@@ -11,7 +12,13 @@ position = Vector2(532, 312)
 
 [node name="Doors" type="Node" parent="." unique_id=406132807]
 
-[node name="temp_room_shower" type="TextEdit" parent="." unique_id=1354921738]
+[node name="Door_s" parent="Doors" unique_id=620864986 instance=ExtResource("3_g5ssp")]
+position = Vector2(550, 646)
+rotation = -3.129742
+room_tag = "room_6"
+position_tag = "n"
+
+[node name="temp_room_label" type="TextEdit" parent="." unique_id=1354921738]
 offset_left = 182.0
 offset_top = 218.0
 offset_right = 213.0

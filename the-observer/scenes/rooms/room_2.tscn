@@ -18,7 +18,13 @@ rotation = -1.5799239
 room_tag = "room_1"
 position_tag = "e"
 
-[node name="temp_room_shower" type="TextEdit" parent="." unique_id=1656208477]
+[node name="Door_s" parent="Doors" unique_id=377564166 instance=ExtResource("3_ar6ir")]
+position = Vector2(556, 647.00006)
+rotation = 3.141419
+room_tag = "room_5"
+position_tag = "n"
+
+[node name="temp_room_label" type="TextEdit" parent="." unique_id=1656208477]
 offset_left = 182.0
 offset_top = 218.0
 offset_right = 213.0

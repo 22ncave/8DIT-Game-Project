@@ -24,7 +24,7 @@ rotation = 1.5680736
 room_tag = "room_2"
 position_tag = "w"
 
-[node name="temp_room_shower" type="TextEdit" parent="." unique_id=447191007]
+[node name="temp_room_label" type="TextEdit" parent="." unique_id=447191007]
 offset_left = 182.0
 offset_top = 218.0
 offset_right = 213.0
