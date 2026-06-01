@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dyesxlc85kkd3"]
+
+[ext_resource type="Script" uid="uid://cx1qbx2jph1ti" path="res://scripts/monster.gd" id="1_1cbnp"]
+[ext_resource type="Texture2D" uid="uid://b84nwegnytgwg" path="res://icon.svg" id="1_uwnm8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1cbnp"]
+size = Vector2(128, 129)
+
+[node name="monster" type="CharacterBody2D" unique_id=624561388]
+script = ExtResource("1_1cbnp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=361161733]
+texture = ExtResource("1_uwnm8")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=389463217]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=286751661]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_1cbnp")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1414277429]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1070625376]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_1cbnp")

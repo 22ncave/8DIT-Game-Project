@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b3guynd2wrsl4" path="res://scripts/level.gd" id="1_f8nwv"]
 [ext_resource type="PackedScene" uid="uid://dqkqblw0t81lj" path="res://scenes/player.tscn" id="1_luyxt"]
 [ext_resource type="PackedScene" uid="uid://bhixvpk506kjs" path="res://scenes/door.tscn" id="3_hstmy"]
+[ext_resource type="PackedScene" uid="uid://bg7fi3nwqs56j" path="res://scenes/wall.tscn" id="4_1vxjc"]
 
 [node name="room_9" type="Node2D" unique_id=245765173]
 script = ExtResource("1_f8nwv")
@@ -29,3 +30,5 @@ offset_top = 218.0
 offset_right = 213.0
 offset_bottom = 269.0
 text = "9"
+
+[node name="wall" parent="." unique_id=976235932 instance=ExtResource("4_1vxjc")]

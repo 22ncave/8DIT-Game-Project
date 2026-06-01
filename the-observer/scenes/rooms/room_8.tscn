@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b3guynd2wrsl4" path="res://scripts/level.gd" id="1_n7o1u"]
 [ext_resource type="PackedScene" uid="uid://dqkqblw0t81lj" path="res://scenes/player.tscn" id="1_tdltm"]
 [ext_resource type="PackedScene" uid="uid://bhixvpk506kjs" path="res://scenes/door.tscn" id="3_jygfs"]
+[ext_resource type="PackedScene" uid="uid://bg7fi3nwqs56j" path="res://scenes/wall.tscn" id="4_8ndhd"]
 
 [node name="room_8" type="Node2D" unique_id=1000437915]
 script = ExtResource("1_n7o1u")
@@ -18,7 +19,7 @@ room_tag = "room_5"
 position_tag = "s"
 
 [node name="Door_e" parent="Doors" unique_id=376427902 instance=ExtResource("3_jygfs")]
-position = Vector2(1153, 351)
+position = Vector2(1144, 351)
 rotation = 1.5713986
 room_tag = "room_9"
 position_tag = "w"
@@ -29,3 +30,5 @@ offset_top = 218.0
 offset_right = 213.0
 offset_bottom = 269.0
 text = "8"
+
+[node name="wall" parent="." unique_id=976235932 instance=ExtResource("4_8ndhd")]
