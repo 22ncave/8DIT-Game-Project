@@ -4,6 +4,15 @@
 [ext_resource type="Script" uid="uid://b3guynd2wrsl4" path="res://scripts/level.gd" id="1_yf4pg"]
 [ext_resource type="PackedScene" uid="uid://bhixvpk506kjs" path="res://scenes/door.tscn" id="3_8h73v"]
 [ext_resource type="PackedScene" uid="uid://bg7fi3nwqs56j" path="res://scenes/wall.tscn" id="4_u8vhm"]
+[ext_resource type="PackedScene" uid="uid://dyesxlc85kkd3" path="res://scenes/monster.tscn" id="5_4ssin"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_nvm38"]
+vertices = PackedVector2Array(1136.0703, 14.8828125, 1140.9219, 632.97656, 13.8984375, 631.0078, 8.09375, 2.109375)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-2, -8, 1146, 5, 1151, 643, 4, 641), PackedVector2Array(710, 277, 744, 247, 782, 233, 835, 245, 873, 284, 877, 330, 859, 374, 826, 398, 769, 408, 717, 378, 701, 338)])
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tfhis"]
+radius = 82.02438
 
 [node name="room_4" type="Node2D" unique_id=540042818]
 script = ExtResource("1_yf4pg")
@@ -38,3 +47,17 @@ offset_bottom = 269.0
 text = "4"
 
 [node name="wall" parent="." unique_id=976235932 instance=ExtResource("4_u8vhm")]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=69489917]
+navigation_polygon = SubResource("NavigationPolygon_nvm38")
+
+[node name="monster" parent="." unique_id=624561388 node_paths=PackedStringArray("player") instance=ExtResource("5_4ssin")]
+position = Vector2(999, 496)
+player = NodePath("../Player")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=245921804]
+position = Vector2(791, 318)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1377493675]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_tfhis")

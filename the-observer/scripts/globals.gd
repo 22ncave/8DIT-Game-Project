@@ -9,6 +9,7 @@ const room_6 = preload("res://scenes/rooms/room_6.tscn")
 const room_7 = preload("res://scenes/rooms/room_7.tscn")
 const room_8 = preload("res://scenes/rooms/room_8.tscn")
 const room_9 = preload("res://scenes/rooms/room_9.tscn")
+const death_cutscene = preload("res://scenes/cutscene.tscn")
 
 signal on_trigger_player_spawn
 
@@ -40,5 +41,13 @@ func go_to_room(room_tag, position_tag, entity_tag):
 			spawn_door_tag = position_tag
 			get_tree().call_deferred("change_scene_to_packed",scene_to_load)
 			
+func player_death():
+	spawn_door_tag = null
+	get_tree().call_deferred("change_scene_to_packed",death_cutscene)
+
+func restart():
+	spawn_door_tag = null
+	get_tree().call_deferred("change_scene_to_packed",room_1)
+
 func trigger_player_spawn(position: Vector2, direction: String):
 	on_trigger_player_spawn.emit(position, direction)

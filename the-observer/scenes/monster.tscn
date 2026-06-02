@@ -7,6 +7,7 @@
 size = Vector2(128, 129)
 
 [node name="monster" type="CharacterBody2D" unique_id=624561388]
+collision_layer = 4
 script = ExtResource("1_1cbnp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=361161733]
@@ -19,7 +20,10 @@ position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_1cbnp")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1414277429]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1070625376]
 position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_1cbnp")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -22,12 +22,14 @@ position = Vector2(549, 324)
 [node name="Door_s" parent="Doors" unique_id=620864986 instance=ExtResource("2_hnbyo")]
 position = Vector2(549, 649)
 rotation = -3.136857
+collision_mask = 3
 room_tag = "room_4"
 position_tag = "n"
 
 [node name="Door_e" parent="Doors" unique_id=2088589569 instance=ExtResource("2_hnbyo")]
 position = Vector2(1150, 332)
 rotation = 1.5680736
+collision_mask = 3
 room_tag = "room_2"
 position_tag = "w"
 
