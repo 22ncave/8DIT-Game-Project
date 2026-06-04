@@ -6,6 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1cbnp"]
 size = Vector2(128, 129)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_1cbnp"]
+radius = 201.0398
+
 [node name="monster" type="CharacterBody2D" unique_id=624561388]
 collision_layer = 4
 script = ExtResource("1_1cbnp")
@@ -26,4 +29,11 @@ collision_mask = 2
 position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_1cbnp")
 
+[node name="sight_line" type="Area2D" parent="." unique_id=61927605]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sight_line" unique_id=1087180284]
+shape = SubResource("CircleShape2D_1cbnp")
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="sight_line" to="." method="_on_sight_line_body_entered"]
