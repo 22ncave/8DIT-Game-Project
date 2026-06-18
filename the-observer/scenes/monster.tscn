@@ -17,6 +17,7 @@ script = ExtResource("1_1cbnp")
 texture = ExtResource("1_uwnm8")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=389463217]
+avoidance_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=286751661]
 position = Vector2(0, 1.5)

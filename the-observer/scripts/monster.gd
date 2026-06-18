@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @onready var nav_agent = $NavigationAgent2D
-var speed = 150
+var speed = 300
 var sees_player = false
 
 @export var entity_tag : String

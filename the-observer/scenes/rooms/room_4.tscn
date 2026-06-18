@@ -7,9 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://dyesxlc85kkd3" path="res://scenes/monster.tscn" id="5_4ssin"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_nvm38"]
-vertices = PackedVector2Array(1136.0703, 14.8828125, 1140.9219, 632.97656, 13.8984375, 631.0078, 8.09375, 2.109375)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-2, -8, 1146, 5, 1151, 643, 4, 641), PackedVector2Array(710, 277, 744, 247, 782, 233, 835, 245, 873, 284, 877, 330, 859, 374, 826, 398, 769, 408, 717, 378, 701, 338)])
+vertices = PackedVector2Array(1136.0703, 14.8828125, 1140.9219, 632.97656, 924.5, 346.57813, 906.9375, 219.47656, 8.09375, 2.109375, 776.8828, 189.52344, 679.2578, 231.25, 13.8984375, 631.0078, 660.3906, 363.0703, 857.78906, 429.6172, 740.7969, 442.46094)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3, 5), PackedInt32Array(4, 5, 6), PackedInt32Array(7, 4, 6, 8), PackedInt32Array(9, 2, 1), PackedInt32Array(9, 1, 7, 10), PackedInt32Array(7, 8, 10)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-2, -8, 1146, 5, 1151, 643, 4, 641)])
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tfhis"]
 radius = 82.02438
@@ -61,3 +61,5 @@ position = Vector2(791, 318)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1377493675]
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_tfhis")
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="StaticBody2D" unique_id=694144981]
