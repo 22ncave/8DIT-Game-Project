@@ -4,9 +4,11 @@ extends Node2D
 func _physics_process(delta: float) -> void:
 	
 	if Globals.monster_working == true:
+		$monster.visible = true
 		$monster.process_mode = Node.PROCESS_MODE_INHERIT
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$monster.visible = false
 	$monster.process_mode = Node.PROCESS_MODE_DISABLED
 	if Globals.spawn_door_tag != null:
 		_on_level_spawn(Globals.spawn_door_tag)

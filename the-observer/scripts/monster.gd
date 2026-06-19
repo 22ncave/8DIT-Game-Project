@@ -34,3 +34,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_sight_line_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		sees_player = true
+		Globals.monster_anger()

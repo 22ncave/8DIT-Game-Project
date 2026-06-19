@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://b3guynd2wrsl4" path="res://scripts/level.gd" id="1_josgj"]
 [ext_resource type="PackedScene" uid="uid://bhixvpk506kjs" path="res://scenes/door.tscn" id="3_g5ssp"]
 [ext_resource type="PackedScene" uid="uid://bg7fi3nwqs56j" path="res://scenes/wall.tscn" id="4_ahsqd"]
+[ext_resource type="PackedScene" uid="uid://dyesxlc85kkd3" path="res://scenes/monster.tscn" id="5_hfp1j"]
 
 [node name="room_3" type="Node2D" unique_id=403007972]
 script = ExtResource("1_josgj")
@@ -27,3 +28,6 @@ offset_bottom = 269.0
 text = "3"
 
 [node name="wall" parent="." unique_id=976235932 instance=ExtResource("4_ahsqd")]
+
+[node name="monster" parent="." unique_id=624561388 instance=ExtResource("5_hfp1j")]
+position = Vector2(1006, 138)

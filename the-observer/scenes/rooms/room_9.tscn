@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dqkqblw0t81lj" path="res://scenes/player.tscn" id="1_luyxt"]
 [ext_resource type="PackedScene" uid="uid://bhixvpk506kjs" path="res://scenes/door.tscn" id="3_hstmy"]
 [ext_resource type="PackedScene" uid="uid://bg7fi3nwqs56j" path="res://scenes/wall.tscn" id="4_1vxjc"]
+[ext_resource type="PackedScene" uid="uid://dyesxlc85kkd3" path="res://scenes/monster.tscn" id="5_yn26u"]
 
 [node name="room_9" type="Node2D" unique_id=245765173]
 script = ExtResource("1_f8nwv")
@@ -32,3 +33,6 @@ offset_bottom = 269.0
 text = "9"
 
 [node name="wall" parent="." unique_id=976235932 instance=ExtResource("4_1vxjc")]
+
+[node name="monster" parent="." unique_id=624561388 instance=ExtResource("5_yn26u")]
+position = Vector2(1029, 513)
