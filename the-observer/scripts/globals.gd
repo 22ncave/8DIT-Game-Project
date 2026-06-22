@@ -6,6 +6,11 @@ var num
 var monster_room
 var monster_working
 var monster_agro = 0
+var last_door
+
+func spawn_check(spawn):
+	var last_door = spawn
+	print(last_door)
 
 func monster_anger():
 	monster_agro = 3
@@ -104,7 +109,7 @@ func restart():
 	spawn_door_tag = null
 	get_tree().call_deferred("change_scene_to_packed",room_1)
 	monster_working = false
-	agro_check()
+	monster_agro = 0
 
 func trigger_player_spawn(position: Vector2, direction: String):
 	on_trigger_player_spawn.emit(position, direction)

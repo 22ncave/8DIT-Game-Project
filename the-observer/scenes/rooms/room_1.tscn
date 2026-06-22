@@ -20,7 +20,7 @@ position = Vector2(549, 324)
 [node name="Doors" type="Node" parent="." unique_id=439351758]
 
 [node name="Door_s" parent="Doors" unique_id=620864986 instance=ExtResource("2_hnbyo")]
-position = Vector2(549, 649)
+position = Vector2(576, 650)
 rotation = -3.136857
 room_tag = "room_4"
 position_tag = "n"

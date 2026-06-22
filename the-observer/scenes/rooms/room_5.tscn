@@ -20,24 +20,24 @@ position = Vector2(528, 213)
 [node name="Doors" type="Node" parent="." unique_id=814824274]
 
 [node name="Door_n" parent="Doors" unique_id=620864986 instance=ExtResource("3_qf5d3")]
-position = Vector2(549, 0)
+position = Vector2(576, 0)
 room_tag = "room_2"
 position_tag = "s"
 
 [node name="Door_w" parent="Doors" unique_id=395841820 instance=ExtResource("3_qf5d3")]
-position = Vector2(0, 315)
+position = Vector2(0, 332)
 rotation = -1.5859045
 room_tag = "room_4"
 position_tag = "e"
 
 [node name="Door_e" parent="Doors" unique_id=118358239 instance=ExtResource("3_qf5d3")]
-position = Vector2(1150, 303)
+position = Vector2(1150, 332)
 rotation = 1.5773911
 room_tag = "room_6"
 position_tag = "w"
 
 [node name="Door_s" parent="Doors" unique_id=1876823071 instance=ExtResource("3_qf5d3")]
-position = Vector2(548, 648)
+position = Vector2(576, 650)
 rotation = -3.132702
 room_tag = "room_8"
 position_tag = "n"
