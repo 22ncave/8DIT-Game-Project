@@ -5,18 +5,21 @@ var time_passed: float = 0.0
 var num 
 var monster_room
 var monster_working
-var monster_agro = 1
+var monster_agro = 0
 
 func monster_anger():
 	monster_agro = 3
 	print(monster_agro)
 
+func agro_check():
+	if monster_agro > 0:
+		monster_agro -= 1
+
 func _physics_process(delta: float) -> void:
 	time_passed += delta
 	if time_passed >= 1.0:
 		num = randi_range(1, 4)
-		num *= 4
-		num *= monster_agro
+		num *= (4 + monster_agro)
 		if num >12:
 			monster_room = randi_range(2,9)
 			print(monster_room)
@@ -48,38 +51,47 @@ func go_to_room(room_tag, position_tag, entity_tag):
 				scene_to_load = room_1
 				player_room = 1
 				monster_working = false
+				agro_check()
 			"room_2":
 				scene_to_load = room_2
 				player_room = 2
 				monster_working = false
+				agro_check()
 			"room_3":
 				scene_to_load = room_3
 				player_room = 3
 				monster_working = false
+				agro_check()
 			"room_4":
 				scene_to_load = room_4
 				player_room = 4
 				monster_working = false
+				agro_check()
 			"room_5":
 				scene_to_load = room_5
 				player_room = 5
 				monster_working = false
+				agro_check()
 			"room_6":
 				scene_to_load = room_6
 				player_room = 6
 				monster_working = false
+				agro_check()
 			"room_7":
 				scene_to_load = room_7
 				player_room = 7
 				monster_working = false
+				agro_check()
 			"room_8":
 				scene_to_load = room_8
 				player_room = 8
 				monster_working = false
+				agro_check()
 			"room_9":
 				scene_to_load = room_9
 				player_room = 9
 				monster_working = false
+				agro_check()
 		if scene_to_load != null:
 			spawn_door_tag = position_tag
 			get_tree().call_deferred("change_scene_to_packed",scene_to_load)
@@ -91,6 +103,8 @@ func player_death():
 func restart():
 	spawn_door_tag = null
 	get_tree().call_deferred("change_scene_to_packed",room_1)
+	monster_working = false
+	agro_check()
 
 func trigger_player_spawn(position: Vector2, direction: String):
 	on_trigger_player_spawn.emit(position, direction)
