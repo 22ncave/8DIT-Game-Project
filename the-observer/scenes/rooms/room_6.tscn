@@ -6,6 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://bg7fi3nwqs56j" path="res://scenes/wall.tscn" id="4_7u5fy"]
 [ext_resource type="PackedScene" uid="uid://dyesxlc85kkd3" path="res://scenes/monster.tscn" id="5_tw5gm"]
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_tw5gm"]
+vertices = PackedVector2Array(1145.8672, 635, 10.046875, 635, 12.953125, 17, 1138.1172, 17)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(3, 7, 1148, 7, 1156, 645, 0, 645)])
+
 [node name="room_6" type="Node2D" unique_id=1375047011]
 script = ExtResource("1_u1063")
 
@@ -40,5 +45,9 @@ text = "6"
 
 [node name="wall" parent="." unique_id=976235932 instance=ExtResource("4_7u5fy")]
 
-[node name="monster" parent="." unique_id=624561388 instance=ExtResource("5_tw5gm")]
+[node name="monster" parent="." unique_id=624561388 node_paths=PackedStringArray("player") instance=ExtResource("5_tw5gm")]
 position = Vector2(1038, 255)
+player = NodePath("../Player")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=24211828]
+navigation_polygon = SubResource("NavigationPolygon_tw5gm")
