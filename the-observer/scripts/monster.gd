@@ -4,7 +4,6 @@ extends CharacterBody2D
 var speed = 300
 var sees_player = false
 
-
 @export var entity_tag : String
 
 @export var player:CharacterBody2D

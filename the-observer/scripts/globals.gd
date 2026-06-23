@@ -6,11 +6,22 @@ var num
 var monster_room
 var monster_working
 var monster_agro = 0
-var last_door
+var door_x 
+var door_y 
 
-func spawn_check(spawn):
-	var last_door = spawn
-	print(last_door)
+func spawn_check(tag):
+	if tag == "n":
+		door_x = 576
+		door_y = 0
+	elif tag == "s":
+		door_x = 576
+		door_y = 650
+	elif tag == "w":
+		door_x = 0
+		door_y = 332
+	elif tag == "e":
+		door_x = 1150
+		door_y = 332
 
 func monster_anger():
 	monster_agro = 3
@@ -27,10 +38,9 @@ func _physics_process(delta: float) -> void:
 		num *= (4 + monster_agro)
 		if num >12:
 			monster_room = randi_range(2,9)
-			print(monster_room)
-			if monster_room == Globals.player_room:
-				print("working")
+			if monster_room == player_room:
 				monster_working = true
+				print("yo")
 		time_passed = 0.0
 
 const room_1 = preload("res://scenes/rooms/room_1.tscn")

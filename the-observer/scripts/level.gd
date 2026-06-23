@@ -1,11 +1,11 @@
 extends Node2D
 
-
 func _physics_process(delta: float) -> void:
 	
 	if Globals.monster_working == true:
 		$monster.visible = true
 		$monster.process_mode = Node.PROCESS_MODE_INHERIT
+		$monster.global_position = Vector2(Globals.door_x,Globals.door_y)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$monster.visible = false
