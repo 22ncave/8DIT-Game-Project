@@ -15,9 +15,9 @@ func spawn_check(tag):
 		door_y = 0
 	elif tag == "s":
 		door_x = 576
-		door_y = 650
+		door_y = 648
 	elif tag == "w":
-		door_x = 0
+		door_x = 50
 		door_y = 332
 	elif tag == "e":
 		door_x = 1150
@@ -120,6 +120,7 @@ func restart():
 	get_tree().call_deferred("change_scene_to_packed",room_1)
 	monster_working = false
 	monster_agro = 0
+	player_room = 1
 
 func trigger_player_spawn(position: Vector2, direction: String):
 	on_trigger_player_spawn.emit(position, direction)

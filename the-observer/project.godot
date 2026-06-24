@@ -53,3 +53,4 @@ right={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0.008724365, 0.023076477, 0.018134741, 1)
