@@ -20,12 +20,11 @@ func spawn_check(tag):
 		door_x = 50
 		door_y = 332
 	elif tag == "e":
-		door_x = 1150
+		door_x = 1100
 		door_y = 332
 
 func monster_anger():
 	monster_agro = 3
-	print(monster_agro)
 
 func agro_check():
 	if monster_agro > 0:
@@ -40,7 +39,6 @@ func _physics_process(delta: float) -> void:
 			monster_room = randi_range(2,9)
 			if monster_room == player_room:
 				monster_working = true
-				print("yo")
 		time_passed = 0.0
 
 const room_1 = preload("res://scenes/rooms/room_1.tscn")

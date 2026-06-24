@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b1ipyqk1kyhj1"]
+
+[ext_resource type="Texture2D" uid="uid://b84nwegnytgwg" path="res://icon.svg" id="1_xw8pq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hphsv"]
+radius = 80.50466
+
+[node name="tree_object" type="StaticBody2D" unique_id=1765803712]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1899886949]
+texture = ExtResource("1_xw8pq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1986341097]
+shape = SubResource("CircleShape2D_hphsv")
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="." unique_id=1903147034]
+vertices = PackedVector2Array(-2, -82, 20, -78, 42, -69, 59, -56, 70, -41, 79, -21, 81, 0, 79, 21, 71, 41, 58, 58, 40, 71, 20, 79, -2, 82, -23, 77, -44, 69, -57, 58, -70, 41, -80, 19, -82, -2, -78, -24, -70, -43, -56, -60, -40, -71, -22, -78)
+affect_navigation_mesh = true
+avoidance_enabled = false
