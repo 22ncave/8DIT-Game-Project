@@ -12,7 +12,7 @@ var door_y
 func spawn_check(tag):
 	if tag == "n":
 		door_x = 576
-		door_y = 0
+		door_y = 10
 	elif tag == "s":
 		door_x = 576
 		door_y = 648

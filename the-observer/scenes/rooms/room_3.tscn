@@ -7,9 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://dyesxlc85kkd3" path="res://scenes/monster.tscn" id="5_hfp1j"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_hfp1j"]
-vertices = PackedVector2Array(1145.8672, 635, 10.046875, 635, 12.953125, 17, 1138.1172, 17)
+vertices = PackedVector2Array(1108.3984, 598, 47.21875, 598, 49.78125, 54, 1101.5781, 54)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(3, 7, 1148, 7, 1156, 645, 0, 645)])
+parsed_collision_mask = 1
+source_geometry_mode = 1
+agent_radius = 47.0
 
 [node name="room_3" type="Node2D" unique_id=403007972]
 script = ExtResource("1_josgj")
@@ -38,5 +41,5 @@ text = "3"
 position = Vector2(1006, 138)
 player = NodePath("../Player")
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=621569825]
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1441792581]
 navigation_polygon = SubResource("NavigationPolygon_hfp1j")
