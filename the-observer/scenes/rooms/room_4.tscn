@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bg7fi3nwqs56j" path="res://scenes/wall.tscn" id="4_u8vhm"]
 [ext_resource type="PackedScene" uid="uid://dyesxlc85kkd3" path="res://scenes/monster.tscn" id="5_4ssin"]
 [ext_resource type="PackedScene" uid="uid://b1ipyqk1kyhj1" path="res://scenes/objects/tree_object.tscn" id="6_nvm38"]
+[ext_resource type="PackedScene" uid="uid://ddoeh4mwul3is" path="res://scenes/fade.tscn" id="7_tfhis"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_nvm38"]
 vertices = PackedVector2Array(839.5, 410.9297, 1108.3984, 598, 47.21875, 598, 642.5, 410.9297, 567.5, 408.9297, 370.5, 408.9297, 1101.5781, 54, 839.5, 217.07031, 49.78125, 54, 642.5, 217.07031, 567.5, 215.07031, 370.5, 215.07031)
@@ -39,6 +40,8 @@ position = Vector2(576, 650)
 rotation = -3.1342828
 room_tag = "room_7"
 position_tag = "n"
+
+[node name="Fade" parent="Doors" unique_id=974174406 instance=ExtResource("7_tfhis")]
 
 [node name="temp_room_label" type="TextEdit" parent="." unique_id=782817517]
 offset_left = 182.0

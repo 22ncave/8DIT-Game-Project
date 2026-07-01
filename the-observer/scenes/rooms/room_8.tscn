@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bhixvpk506kjs" path="res://scenes/door.tscn" id="3_jygfs"]
 [ext_resource type="PackedScene" uid="uid://bg7fi3nwqs56j" path="res://scenes/wall.tscn" id="4_8ndhd"]
 [ext_resource type="PackedScene" uid="uid://dyesxlc85kkd3" path="res://scenes/monster.tscn" id="5_8ctl8"]
+[ext_resource type="PackedScene" uid="uid://ddoeh4mwul3is" path="res://scenes/fade.tscn" id="6_qvnhw"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_8ctl8"]
 vertices = PackedVector2Array(1108.3984, 598, 47.21875, 598, 49.78125, 54, 1101.5781, 54)
@@ -48,3 +49,5 @@ player = NodePath("../Player")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1017099636]
 navigation_polygon = SubResource("NavigationPolygon_8ctl8")
+
+[node name="Fade" parent="." unique_id=974174406 instance=ExtResource("6_qvnhw")]

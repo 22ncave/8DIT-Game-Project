@@ -2,6 +2,8 @@ extends Node2D
 
 var mon_spawn = true
 
+@onready var fade: CanvasLayer = $Doors/Fade
+
 func _physics_process(delta: float) -> void:
 	
 	if Globals.monster_working == true:
@@ -21,3 +23,5 @@ func _on_level_spawn(position_tag: String):
 	var door_path = "Doors/Door_" + position_tag
 	var door = get_node(door_path) as Door
 	Globals.trigger_player_spawn(door.spawn.global_position, door.position_tag)
+	fade.fade(1.0, 0.0)
+	await fade.fade(0.0, 1.5).finished
