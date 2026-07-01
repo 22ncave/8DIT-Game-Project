@@ -29,6 +29,8 @@ rotation = -3.129742
 room_tag = "room_6"
 position_tag = "n"
 
+[node name="Fade" parent="Doors" unique_id=974174406 instance=ExtResource("6_d8ufh")]
+
 [node name="temp_room_label" type="TextEdit" parent="." unique_id=1354921738]
 offset_left = 182.0
 offset_top = 218.0
@@ -44,5 +46,3 @@ player = NodePath("../Player")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1441792581]
 navigation_polygon = SubResource("NavigationPolygon_hfp1j")
-
-[node name="Fade" parent="." unique_id=974174406 instance=ExtResource("6_d8ufh")]

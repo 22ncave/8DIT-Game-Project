@@ -28,6 +28,8 @@ position = Vector2(576, 0)
 room_tag = "room_4"
 position_tag = "s"
 
+[node name="Fade" parent="Doors" unique_id=974174406 instance=ExtResource("6_ba43c")]
+
 [node name="temp_room_label" type="TextEdit" parent="." unique_id=1678518379]
 offset_left = 182.0
 offset_top = 218.0
@@ -43,5 +45,3 @@ player = NodePath("../Player")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=14630281]
 navigation_polygon = SubResource("NavigationPolygon_erpl1")
-
-[node name="Fade" parent="." unique_id=974174406 instance=ExtResource("6_ba43c")]
