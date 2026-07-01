@@ -24,4 +24,4 @@ func _on_level_spawn(position_tag: String):
 	var door = get_node(door_path) as Door
 	Globals.trigger_player_spawn(door.spawn.global_position, door.position_tag)
 	fade.fade(1.0, 0.0)
-	await fade.fade(0.0, 1.5).finished
+	await fade.fade(0.0, 0.5).finished
