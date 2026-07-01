@@ -12,6 +12,9 @@ func _physics_process(delta: float) -> void:
 		if mon_spawn == true:
 			$monster.global_position = Vector2(Globals.door_x,Globals.door_y)
 			mon_spawn = false
+	else:
+		$monster.visible = false
+		$monster.process_mode = Node.PROCESS_MODE_DISABLED
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$monster.visible = false

@@ -8,6 +8,13 @@ var monster_working
 var monster_agro = 0
 var door_x 
 var door_y 
+var can_spawn
+
+func moving_room():
+	monster_working = false
+	can_spawn = false
+	await get_tree().create_timer(2.0).timeout
+	can_spawn = true
 
 func spawn_check(tag):
 	if tag == "n":
@@ -33,13 +40,14 @@ func agro_check():
 func _physics_process(delta: float) -> void:
 	time_passed += delta
 	if time_passed >= 1.0:
-		num = randi_range(1, 4)
-		num *= (4 + monster_agro)
-		if num >12:
-			monster_room = randi_range(2,9)
-			if monster_room == player_room:
-				monster_working = true
-		time_passed = 0.0
+		if can_spawn == true:
+			num = randi_range(1, 4)
+			num *= (4 + monster_agro)
+			if num >12:
+				monster_room = randi_range(2,9)
+				if monster_room == player_room:
+					monster_working = true
+			time_passed = 0.0
 
 const room_1 = preload("res://scenes/rooms/room_1.tscn")
 const room_2 = preload("res://scenes/rooms/room_2.tscn")
